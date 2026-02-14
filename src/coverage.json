@@ -1,0 +1,49 @@
+{
+  "kind": "coverage_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-14T14:34:54.371Z",
+  "sources": {
+    "buildRequest": true,
+    "implementationPlan": true
+  },
+  "requirements": {
+    "total": 2,
+    "implemented": 2,
+    "items": [
+      {
+        "id": "REQ-10",
+        "summary": "Add graceful error handling for the final photo in the celebration view: if the photo cannot be loaded, show a small English fallback message in the UI (and avoid layout breaking), and log a clear console warning indicating the missing/failed image path.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/CelebrationView.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/CelebrationView.tsx"
+        ]
+      },
+      {
+        "id": "REQ-9",
+        "summary": "Fix the celebration view so the final uploaded photo reliably loads from static assets, using a valid file path under `frontend/public/assets/generated/` (and matching the actual filename and extension) rather than a broken/missing reference.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/public/assets/generated/20250912_152552.jpg",
+          "frontend/src/components/CelebrationView.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/CelebrationView.tsx"
+        ]
+      }
+    ]
+  },
+  "changedFiles": [
+    "build-request.json",
+    "feature_evidence.json",
+    "frontend-file-summaries.txt",
+    "frontend-implementation-plan.json",
+    "frontend/src/components/CelebrationView.tsx",
+    "project_state.json",
+    "scratch/component-selection.json",
+    "spec.md",
+    "spec_vs_diff_report.json"
+  ]
+}

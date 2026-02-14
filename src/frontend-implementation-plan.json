@@ -1,0 +1,42 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Fix celebration view final photo static asset loading",
+  "requirements": [
+    {
+      "id": "REQ-9",
+      "summary": "Ensure the celebration view references a real static photo file under frontend/public/assets/generated with the correct filename/extension so it loads reliably on hard refresh.",
+      "acceptanceCriteria": [
+        "After clicking “Yes”, the celebration view renders the final photo without a broken-image icon on a fresh load (hard refresh).",
+        "The photo is served as a static public asset (no backend calls) and the `src` path resolves to an existing file under `frontend/public/assets/generated/`."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/public/assets/generated/20250912_152552.jpg",
+          "operation": "create",
+          "description": "Add the final uploaded photo as a static public asset at this exact path/filename so the celebration view can load it reliably (ensure the committed file matches the referenced extension)."
+        },
+        {
+          "path": "frontend/src/components/CelebrationView.tsx",
+          "operation": "modify",
+          "description": "Update/verify the final photo <img> src to reference the valid static public asset path \"/assets/generated/20250912_152552.jpg\" (matching the actual filename and extension under frontend/public/assets/generated/)."
+        }
+      ]
+    },
+    {
+      "id": "REQ-10",
+      "summary": "Add graceful image-load failure handling for the final photo with a UI fallback message and a clear console warning containing the failed path.",
+      "acceptanceCriteria": [
+        "If the photo fails to load, the UI shows an English fallback message (e.g., “Photo failed to load.”) in place of the image and the rest of the celebration view remains usable.",
+        "The browser console includes a clear warning identifying the failed image URL/path when the image load fails."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/CelebrationView.tsx",
+          "operation": "modify",
+          "description": "Add an onError handler for the final photo that (1) logs a clear console warning including the failed image src/path and (2) swaps the image area to a small English fallback message while preserving layout (no layout break) so the celebration view remains usable."
+        }
+      ]
+    }
+  ]
+}

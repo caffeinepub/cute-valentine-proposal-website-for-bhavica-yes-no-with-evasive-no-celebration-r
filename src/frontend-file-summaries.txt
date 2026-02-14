@@ -1,0 +1,10 @@
+{
+  "frontend/src/App.tsx": "Main application component that manages the proposal state and renders either the ValentineProposal or CelebrationView with floating hearts overlay and footer attribution.",
+  "frontend/src/components/ValentineProposal.tsx": "Interactive proposal component displaying the question to Bhavica with Yes/No buttons, implementing viewport-wide evasive behavior for the No button with cute rotating prompts and fixed positioning.",
+  "frontend/src/components/CelebrationView.tsx": "Celebration screen shown after accepting, displaying the success message, celebratory meme image, and the uploaded photo with error handling that shows a fallback message if the photo fails to load and logs the failed path to console.",
+  "frontend/src/components/FloatingHeartsOverlay.tsx": "Decorative overlay component that renders animated floating hearts across the screen for romantic ambiance.",
+  "frontend/src/hooks/useEvasiveNoButton.ts": "Custom hook that calculates random positions for the No button across the entire viewport, accepting Yes button ref to avoid overlap and ensuring the button stays fully visible on screen.",
+  "frontend/src/index.css": "Global styles with Valentine's Day themed OKLCH color palette (warm pinks and roses), gradient background, and custom animations for floating hearts.",
+  "frontend/tailwind.config.js": "Tailwind configuration with extended Valentine theme colors, custom font family, and float-up animation keyframes.",
+  "frontend/index.html": "HTML entry point with document title updated to reference Bhavica in the Valentine proposal website."
+}

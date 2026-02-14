@@ -1,0 +1,41 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-fix-the-celebration-view-so-the-final-uploaded-photo-reliably-loads-from-static-assets-using-a-valid-file-path-under-frontend-public-assets-generated-and-matching-the-actual-filename-and-extension-rather-than-a-broken-missing-reference",
+      "featureTitle": "Fix the celebration view so the final uploaded photo reliably loads from static assets, using a valid file path under `frontend/public/assets/generated/` (and matching the actual filename and extension) rather than a broken/missing reference.",
+      "files": [
+        "frontend/src/components/CelebrationView.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-9"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-graceful-error-handling-for-the-final-photo-in-the-celebration-view-if-the-photo-cannot-be-loaded-show-a-small-english-fallback-message-in-the-ui-and-avoid-layout-breaking-and-log-a-clear-console-warning-indicating-the-missing-failed-image-path",
+      "featureTitle": "Add graceful error handling for the final photo in the celebration view: if the photo cannot be loaded, show a small English fallback message in the UI (and avoid layout breaking), and log a clear console warning indicating the missing/failed image path.",
+      "files": [
+        "frontend/src/components/CelebrationView.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-10"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

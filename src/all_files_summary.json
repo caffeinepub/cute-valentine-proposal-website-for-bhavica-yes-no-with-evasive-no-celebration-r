@@ -1,0 +1,18 @@
+{
+  "backend/main.mo": "Minimal Motoko actor with no methods.",
+  "feature_evidence.json": "Feature evidence report listing two CelebrationView-related fix and error-handling features.",
+  "frontend-file-summaries.txt": "Prewritten summaries of key frontend files and components.",
+  "frontend/index.css": "Global Tailwind-based stylesheet defining Valentine-themed OKLCH variables and base styles.",
+  "frontend/index.html": "HTML entry point loading the React app and setting the themed page title.",
+  "frontend/src/App.tsx": "Root React component toggling between ValentineProposal and CelebrationView with floating hearts and footer.",
+  "frontend/src/components/CelebrationView.tsx": "Animated celebration screen showing messages, meme image, and an uploaded photo with error handling.",
+  "frontend/src/components/FloatingHeartsOverlay.tsx": "Generates randomly positioned floating heart icons for a decorative overlay.",
+  "frontend/src/components/ValentineProposal.tsx": "Proposal UI with Yes/No buttons where No evasively moves and shows rotating cute prompts.",
+  "frontend/src/hooks/useActor.ts": "React hook creating and refreshing an authenticated or anonymous IC actor via React Query.",
+  "frontend/src/hooks/useEvasiveNoButton.ts": "Hook computing random safe viewport positions for the evasive No button while avoiding the Yes button.",
+  "frontend/src/hooks/useInternetIdentity.ts": "Provides a React context and hook for managing Internet Identity authentication, including loading stored identities, login flow, and status flags.",
+  "frontend/src/index.css": "Defines Tailwind base layers, custom Valentine-themed color variables, global styles, and animation utilities.",
+  "frontend/src/main.tsx": "Bootstraps the React app, wrapping it with QueryClientProvider and InternetIdentityProvider before rendering App.",
+  "frontend/tailwind.config.js": "Configures Tailwind with custom colors, animations, typography, and extended theme settings using CSS variables.",
+  "project_state.json": "Describes the project’s Valentine proposal site goals, existing features, issues, and architectural notes for build planning."
+}

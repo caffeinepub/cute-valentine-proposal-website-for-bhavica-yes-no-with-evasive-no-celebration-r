@@ -1,0 +1,133 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 9,
+  "summary": "Build a cute Valentine proposal website for Bhavica featuring a \"Will you be my valentine?\" prompt with Yes/No buttons, a playful evasive No button with cute prompts, and a celebratory meme/message reveal after Yes.",
+  "architectural_notes": [
+    "Single-page interactive website with client-side JavaScript handling button movement and state transitions (question -> interaction -> celebration reveal).",
+    "Enhance evasive “No” button behavior to move to widely varying/random positions across the full viewport (not small offsets) on click/hover/tap.",
+    "Celebration state should support rendering a user-provided/uploaded photo asset as part of the final reveal."
+  ],
+  "known_issues": [
+    "“No” button evasive movement is currently too limited; it is not moving around much across the screen.",
+    "User-uploaded photo is not loading/displaying in the celebration view."
+  ],
+  "isFixRequest": true,
+  "existing_features": [
+    {
+      "id": "feature-create-a-single-page-valentine-proposal-experience-addressed-to-bhavika-that-displays-the-main-prompt-in-english-bhavika-will-you-be-my-valentine-and-presents-two-clear-buttons-yes-and-no",
+      "title": "Create a single-page Valentine proposal experience addressed to “Bhavika” that displays the main prompt in English: “Bhavika, will you be my Valentine?” and presents two clear buttons: “Yes” and “No”.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-a-playful-evasive-no-button-behavior-when-the-user-attempts-to-hover-tap-click-the-no-button-it-should-move-to-a-different-position-on-the-screen-so-it-is-difficult-to-click-and-it-should-display-rotating-cute-prompt-text-feedback-e-g-short-playful-messages-near-the-buttons",
+      "title": "Implement a playful evasive “No” button behavior: when the user attempts to hover/tap/click the “No” button, it should move to a different position on the screen so it is difficult to click, and it should display rotating cute prompt text feedback (e.g., short playful messages) near the buttons.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-when-the-user-clicks-yes-transition-the-ui-into-a-celebration-state-that-reveals-a-celebratory-meme-image-and-displays-the-english-message-haha-i-knew-you-d-say-yes-i-d-like-to-be-your-valentine-too",
+      "title": "When the user clicks “Yes”, transition the UI into a celebration state that reveals a celebratory meme image and displays the English message: “Haha, I knew you’d say yes! I’d like to be your Valentine too.”",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-apply-a-cohesive-cute-valentine-themed-visual-design-distinct-style-consistent-typography-spacing-and-components-using-a-warm-palette-avoid-blue-purple-and-subtle-animations-e-g-gentle-floating-hearts-confetti-feel-appropriate-for-a-romantic-proposal-page",
+      "title": "Apply a cohesive, cute Valentine-themed visual design (distinct style, consistent typography, spacing, and components) using a warm palette (avoid blue/purple) and subtle animations (e.g., gentle floating hearts / confetti feel) appropriate for a romantic proposal page.",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-the-required-generated-images-as-static-frontend-assets-under-frontend-public-assets-generated-and-render-them-in-the-ui-proposal-celebration-views-without-fetching-them-from-the-backend",
+      "title": "Add the required generated images as static frontend assets under `frontend/public/assets/generated/` and render them in the UI (proposal/celebration views) without fetching them from the backend.",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-proposal-page-so-the-displayed-recipient-name-is-spelled-bhavica-not-bhavika-everywhere-it-appears-in-user-facing-ui-text",
+      "title": "Update the proposal page so the displayed recipient name is spelled “Bhavica” (not “Bhavika”) everywhere it appears in user-facing UI text.",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-after-the-user-presses-the-yes-button-and-the-celebration-view-is-shown-display-the-user-uploaded-photo-at-the-end-of-the-celebration-content-below-the-existing-celebration-meme-and-messages-without-fetching-it-from-the-backend",
+      "title": "After the user presses the “Yes” button and the celebration view is shown, display the user-uploaded photo at the end of the celebration content (below the existing celebration meme and messages), without fetching it from the backend.",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-increase-the-evasive-behavior-of-the-no-button-so-that-when-it-is-clicked-tapped-pointer-pressed-it-can-move-to-positions-across-nearly-the-entire-available-screen-area-instead-of-only-moving-small-distances",
+      "title": "Increase the evasive behavior of the “No” button so that when it is clicked/tapped/pointer-pressed it can move to positions across (nearly) the entire available screen area, instead of only moving small distances.",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-fix-the-celebration-view-so-the-final-uploaded-photo-reliably-loads-from-static-assets-using-a-valid-file-path-under-frontend-public-assets-generated-and-matching-the-actual-filename-and-extension-rather-than-a-broken-missing-reference",
+      "title": "Fix the celebration view so the final uploaded photo reliably loads from static assets, using a valid file path under `frontend/public/assets/generated/` (and matching the actual filename and extension) rather than a broken/missing reference.",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-graceful-error-handling-for-the-final-photo-in-the-celebration-view-if-the-photo-cannot-be-loaded-show-a-small-english-fallback-message-in-the-ui-and-avoid-layout-breaking-and-log-a-clear-console-warning-indicating-the-missing-failed-image-path",
+      "title": "Add graceful error handling for the final photo in the celebration view: if the photo cannot be loaded, show a small English fallback message in the UI (and avoid layout breaking), and log a clear console warning indicating the missing/failed image path.",
+      "reqIds": [
+        "REQ-10"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Create Valentine proposal landing page addressed to Bhavika with main prompt \"Will you be my valentine?\"",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Add Yes/No options with an evasive/moving No button that avoids clicks",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Show cute prompts/messages as the user tries to click No",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "On Yes, reveal a celebratory meme and final message (e.g., \"Haha I knew you would say yes\")",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-5",
+      "summary": "On Yes/celebration reveal, display the user-uploaded photo at the end (final reveal)",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "Cute Valentine Proposal Website for Bhavica (Yes/No with evasive No + celebration reveal)",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

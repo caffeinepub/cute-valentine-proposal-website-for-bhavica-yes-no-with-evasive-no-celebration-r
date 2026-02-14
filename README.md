@@ -1,2 +1,3 @@
-# cute-valentine-proposal-website-for-bhavica-yes-no-with-evasive-no-celebration-r
-Exported from Caffeine project: Cute Valentine Proposal Website for Bhavica (Yes/No with evasive No + celebration reveal)
+## 
+
+To run app build and run docker image: `docker build -t app . docker run -it --network host app`
